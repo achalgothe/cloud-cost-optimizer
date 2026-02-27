@@ -1,0 +1,46 @@
+{
+  "name": "cloud-cost-optimizer",
+  "version": "1.0.0",
+  "description": "AI-Powered Cloud Cost Optimizer - Analyze and optimize cloud spending across AWS, Azure, and GCP",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "start:test": "node server/index-test.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "dev:test": "concurrently \"npm run server:test\" \"npm run client\"",
+    "server": "nodemon server/index.js",
+    "server:test": "nodemon server/index-test.js",
+    "client": "cd client && npm start",
+    "install-all": "npm install && cd client && npm install",
+    "build": "cd client && npm run build",
+    "seed": "node server/seeder.js"
+  },
+  "keywords": [
+    "cloud",
+    "cost-optimization",
+    "aws",
+    "azure",
+    "gcp",
+    "ai",
+    "fintech"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.1693.0",
+    "axios": "^1.6.2",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-rate-limit": "^7.1.5",
+    "express-validator": "^7.0.1",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.0.2"
+  }
+}
