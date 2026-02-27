@@ -2,7 +2,7 @@
   "name": "cloud-cost-optimizer",
   "version": "1.0.0",
   "description": "AI-Powered Cloud Cost Optimizer - Analyze and optimize cloud spending across AWS, Azure, and GCP",
-  "main": "server/index.js",
+  "main": "api/index.js",
   "scripts": {
     "start": "node server/index.js",
     "start:test": "node server/index-test.js",
@@ -13,7 +13,8 @@
     "client": "cd client && npm start",
     "install-all": "npm install && cd client && npm install",
     "build": "cd client && npm run build",
-    "seed": "node server/seeder.js"
+    "seed": "node server/seeder.js",
+    "vercel-build": "npm install && cd client && npm install && npm run build"
   },
   "keywords": [
     "cloud",
